@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal blog</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ==" crossorigin="anonymous"></script>
+    <!-- Home textRevelEffect -->
+    <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <nav class="nav">
+                <li><a href="../../index.html#home-page"><i class="fas fa-home"></i> Home </a></li>
+                <li><a href="../../index.html#about-page"><i class="fas fa-address-card"></i> About </a></li>
+                <li><a href="./dist/Blog/index.html"><i class="fab fa-blogger-b"></i> Blog </a></li>
+                <li><a href="#"><i class="fab fa-github"></i> Github</a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i> linkedIn</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+            </nav>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="posts-wrapper">
+                <div class="post" id="post-num-1">
+                    <div class="post-header">
+                        <h2 class="post-h2">The Four Jobs of the Data Scientist</h2>
+                        <div class="post-date">
+                           <p class="posted-time"><i class="fas fa-stopwatch"></i>April 2, 2021</p> 
+                        </div>
+                        <div class="post-main-content">
+                            <p class="main-post-p">
+                                In 2019 I wrote a post about The Tentpoles of Data Science that tried to distill the key skills of the data scientist. creation and management of workflows for transforming and processing data; (3) the negotiation of human relationships to identify context, allocate resources, and characterize audiences for data analysis products; (4) the application of statistical methods to quantify evidence; and (5) the transformation of data analytic information into coherent narratives and stories. 
+                            </p>
+                        </div>
+                        <button class="btn post-read-more">Read More</button>
+                    </div>
+                </div>
+        
+                <div class="post" id="post-num-2">
+                    <div class="post-header">
+                        <h2 class="post-h2">The role of academia in data science education</h2>
+                        <div class="post-date">
+                           <p class="posted-time"><i class="fas fa-stopwatch"></i>April 2, 2021</p> 
+                        </div>
+                        <div class="post-main-content">
+                            <p class="main-post-p">
+                                I was recently asked to moderate an academic panel on the role of universities in training the data science workforce. I preceded each question with opinionated introductions which I have fused into this blog post. These are weakly held opinions so please consider commenting if you disagree with anything. To discuss data science education we first need to clearly state what it means. The panel organizers defined data science as “an emerging discipline that draws upon knowledge in statistical methodology and computer science to create impactful predictions and insights for a wide range of traditional scholarly fields. 
+                            </p>
+                        </div>
+                        <button class="btn post-read-more">Read More</button>
+                    </div>
+                </div>
+        
+                <div class="post" id="post-num-3">
+                    <div class="post-header">
+                        <h2 class="post-h2">Guest Post: Galin Jones on criteria for promotion and tenture in (bio)statistics departments</h2>
+                        <div class="post-date">
+                           <p class="posted-time"><i class="fas fa-stopwatch"></i>April 2, 2021</p> 
+                        </div>
+                        <div class="post-main-content">
+                            <p class="main-post-p">
+                                Editor’s Note: I attended an ASA Chair’s meeting and spoke about ways we could support junior faculty in data science. After giving my talk Galin Jones, Professor and Director of Statistics at University of Minnesota, and I had an interesting conversation about how they had changed their promotion criteria in response to a faculty candidate being unique. I asked him to write about his experience and he kindly contributed the following post. 
+                            </p>
+                        </div>
+                        <button class="btn post-read-more">Read More</button>
+                    </div>
+                </div>
+        
+                <div class="post" id="post-num-3">
+                    <div class="post-header">
+                        <h2 class="post-h2">Chromebook Data Science - a free online data science program for anyone with a web browser.</h2>
+                        <div class="post-date">
+                           <p class="posted-time"><i class="fas fa-stopwatch"></i>April 2, 2021</p> 
+                        </div>
+                        <div class="post-main-content">
+                            <p class="main-post-p">
+                                Editor’s Note: I attended an ASA Chair’s meeting and spoke about ways we could support junior faculty in data science. After giving my talk Galin Jones, Professor and Director of Statistics at University of Minnesota, and I had an interesting conversation about how they had changed their promotion criteria in response to a faculty candidate being unique. I asked him to write about his experience and he kindly contributed the following post. 
+                            </p>
+                        </div>
+                        <button class="btn post-read-more">Read More</button>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    
+    <script src="./jquery files/textRevelEffect.js"></script>
+    <script>
+        const phrases = ["Data Scientist", "Machine Learning Researcher", "Mathmetation"];
+
+        const el = document.querySelector(".revealEffect");
+        el.addEventListener(click, () => console.log('you clicked!'))
+        const fx = new TextScramble(el);
+
+        let counter = 0;
+        const next = () => {
+          fx.setText(phrases[counter]).then(() => {
+            setTimeout(next, 1000);
+          });
+          counter = (counter + 1) % phrases.length;
+        };
+        next();
+    </script>
+
+
+
+</body>
+</html>
